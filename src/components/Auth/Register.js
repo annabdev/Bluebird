@@ -3,6 +3,12 @@ import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button'
 import { withStyles } from '@material-ui/core/styles'
+import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
+
+
+import { registerUser } from '../../actions/authActions'
+
 
 const styles = {
     textField: {
@@ -10,7 +16,7 @@ const styles = {
         marginBottom: 5
     },
     btnBlock: {
-        textALign: 'center',
+        textAlign: 'center',
         marginBottom: 10,
         marginTop: 20
     }
@@ -39,7 +45,7 @@ class Register extends Component {
             password: this.state.password,
             password2: this.state.password2
         }
-        console.log(userData)
+        this.props.registerUser(userData, this.props.history)
     }
 
     render() {
@@ -91,4 +97,8 @@ class Register extends Component {
     }
 }
 
-export default withStyles(styles)(Register);
+const mapStateToProps = (state) => ({
+    errors: state.errors
+})
+
+export default connect(mapStateToProps, { registerUser }) (withRouter(withStyles(styles)(Register)));
