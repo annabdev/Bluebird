@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid'
 import Header from './Header'
 import StickyFooter from 'react-sticky-footer';
 
+
 const Main = ({ children }) => (
 	<div>
 		<Header />
@@ -14,17 +15,22 @@ const Main = ({ children }) => (
 		<StickyFooter
     bottomThreshold={50}
     normalStyles={{
-    backgroundColor: "inherit",
+	backgroundColor: "inherit",
+	color: "inherit",
+	justifyContent: 'space-between',
 	padding: "2rem",
 	marginTop: 20
     }}
     stickyStyles={{
-    backgroundColor: "rgba(255,255,255,.8)",
+	backgroundColor: "white",
+	color: "white",
 	padding: "2rem",
 	marginTop: 20
     }}
 >
+
     Made with ❤ by Anna
+	
 </StickyFooter>
 
 	</div>
