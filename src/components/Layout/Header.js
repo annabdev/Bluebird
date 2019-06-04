@@ -7,6 +7,9 @@ import { withStyles } from '@material-ui/core/styles'
 const styles = {
     root: {
         flexGrow: 1
+    },
+    space: {
+        justifyContent: 'space-between'
     }
 }
 
