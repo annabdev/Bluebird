@@ -1,5 +1,9 @@
 This project was bootstrapped with Create React App.
 
+Clone along with
+```Bluebird-Server```
+repo
+
 After downloading run 
 ```NPM install ```
 to install dependencies used
