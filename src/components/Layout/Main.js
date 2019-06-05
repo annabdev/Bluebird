@@ -15,18 +15,13 @@ const Main = ({ children }) => (
 		<StickyFooter
     bottomThreshold={50}
     normalStyles={{
-	backgroundColor: "inherit",
-	color: "inherit",
+	backgroundColor: "#008abe",
+	color: "white",
 	justifyContent: 'space-between',
 	padding: "2rem",
 	marginTop: 20
     }}
-    stickyStyles={{
-	backgroundColor: "white",
-	color: "white",
-	padding: "2rem",
-	marginTop: 20
-    }}
+   
 >
 
     Made with ❤ by Anna

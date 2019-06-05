@@ -44,4 +44,3 @@ export const logoutUser = () => dispatch => {
 	setAuthHeader()
 	dispatch(setCurrentUser())
 }
-
