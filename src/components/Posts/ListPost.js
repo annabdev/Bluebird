@@ -46,7 +46,7 @@ class ListPost extends Component {
                     control={
                         <Switch checked={allPosts} onChange={this.handleChange}/>
                     }
-                    label={allPosts ? 'All posts' : 'From following users'} />
+                    label={allPosts ? 'All posts' : 'Following'} />
                     { loading ? <LoadingPosts /> : items}
             </div>
         )

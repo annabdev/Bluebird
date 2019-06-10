@@ -9,6 +9,8 @@ import Main from './components/Layout/Main'
 import Home from './components/Home';
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
+import Profile from './components/Profile/Profile'
+import NotFound from './components/Auth/NotFound'
 
 import { logoutUser, getCurrentUser } from './actions/authActions'
 
@@ -33,6 +35,8 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
+          <Route path="/profile/:userid" component = {Profile} />
+          <Route component={NotFound} />
         </Switch>
         </Main>
       </BrowserRouter>
